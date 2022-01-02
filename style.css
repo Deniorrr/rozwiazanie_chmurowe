@@ -1,0 +1,247 @@
+* {
+    color: #fff;
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: #191919;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    height: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+    min-height: calc(100vh - 215px);
+}
+
+/* //////////////////////////// */
+nav {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #333;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid #ffd900;
+    z-index: 2;
+}
+
+nav h1 {
+    margin-left: 30px;
+    color: #ffd900;
+    font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+}
+
+h3 {
+    margin-bottom: 20px;
+    color: #ffd900;
+    font-size: 2rem;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    font-size: 1.5em;
+    border-left: 1px solid #ffd900;
+    box-shadow: inset 0 0 0 0 #ffd900;
+    transition: ease-out 0.5s;
+    color: #fff;
+}
+
+nav a:hover {
+    box-shadow: inset 120px 0 0 0 #ffd900;
+    color: black;
+}
+
+nav a.router-link-active {
+    box-shadow: inset 120px 0 0 0 #ffd900;
+    color: black;
+}
+
+/* //////////////////////////// */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: end;
+    background-image: linear-gradient(#33333300 150px, #333 0%);
+    border-bottom: 2px solid #ffd900;
+}
+
+header h1 {
+    font-size: 4em
+}
+
+header h2 {
+    text-align: left;
+    margin: 0;
+    font-size: 2em;
+}
+
+.portrait {
+    height: 300px;
+    animation: 1s fade_right;
+}
+
+.statement {
+    animation: 1s fade_left
+}
+
+.about {
+    display: flex;
+    margin: 100px 0 50px 0;
+}
+
+.about_thread {
+    display: grid;
+    opacity: 100%;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 120px;
+    animation: 1s fade_up;
+}
+
+.about>h2 {
+    display: block;
+    font-size: 2.5em;
+    border-bottom: 2px solid #ffd900;
+    padding-right: 100px;
+}
+
+.about_thread>p {
+    text-align: justify;
+}
+
+h3 {
+    margin-bottom: 20px;
+    color: #ffd900;
+    font-size: 2rem;
+}
+
+.icon>img {
+    height: 120px;
+}
+
+@keyframes fade_right {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0%
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 100%
+    }
+}
+
+@keyframes fade_left {
+    0% {
+        transform: translateX(200px);
+        opacity: 0%
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 100%
+    }
+}
+
+.animate_about {
+    animation: 1s fade_up;
+    opacity: 100%
+}
+
+@keyframes fade_up {
+    0% {
+        transform: translateY(200px);
+        opacity: 0%
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 100%
+    }
+}
+
+/* //////////////////////////// */
+
+footer {
+    justify-content: center;
+    background-color: #333;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 115px;
+}
+
+footer .socials {
+    justify-self: end;
+}
+
+footer a>img {
+    height: 40px;
+    margin: 10px;
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+footer a>img:hover {
+    -webkit-transform: rotate(15deg) scale(1.4);
+    transform: rotate(15deg) scale(1.4);
+}
+
+footer>.copy {
+    width: 100%;
+    padding: 15px;
+    border-top: 2px solid #ffd900;
+    text-align: center;
+}
+
+footer ul {
+    display: flex
+}
+
+footer li {
+    list-style-type: none
+}
+
+footer nav a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    font-size: 1.5em;
+    border-left: 1px solid #ffd900;
+    box-shadow: inset 0 0 0 0 #ffd900;
+    transition: ease-out 0.5s;
+    color: #fff;
+}
